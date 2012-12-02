@@ -105,16 +105,13 @@ alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert
 alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-terminal.png "[1] "'
 export MOZ_DISABLE_PANGO=1
 
+# ajout par o3o :
 #Pour finir deux petites options bien pratiques, les pages de man en couleurs et l'historisation de la commande history (à placer à la fin du fichier .bashrc) :
 # activation date_heure dans la commande history
 export HISTTIMEFORMAT="%Y/%m/%d_%T : "
 # les pages de man en couleur, nécessite le paquet "most"
 export PAGER=most
-
-# for GIT : set a fancy prompt (non-color, unless we know we "want" color)
-# PS1='\[\033[01;31m\][\u@\h\[\033[00m\]:\[\033[01;34m\]\w]\[\033[00m\]\n$(__git_ps1 "(%s)")\$ '
-PS1='[\[\e[01;31m\]\u\[\e[00m\]@\[\e[00;34m\]\h\[\e[00m\]:\[\e[00;32m\]\w\[\e[00m\]]\n$(__git_ps1 "(%s)")\$ '
-
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWSTASHSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
+# inclusion de la configuration du prompt en cas de repo git
+if [ -f ~/.bash_prompt ]; then
+    . ~/.bash_prompt
+fi

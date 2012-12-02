@@ -1,4 +1,6 @@
-# My configuration files for :
+My configuration files:
+=======================
+
 Bash,
 conky,
 Vim,

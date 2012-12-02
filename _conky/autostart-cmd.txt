@@ -1,0 +1,1 @@
+conky -p 30 -c /home/user/.conky/.conkyrc_grey

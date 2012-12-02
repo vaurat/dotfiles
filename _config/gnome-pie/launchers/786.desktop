@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Multimédia
+Exec=/usr/bin/gnome-pie -o 786
+Encoding=UTF-8
+Type=Application
+Icon=stock_media-play

@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Menu Principal
+Exec=/usr/bin/gnome-pie -o 745
+Encoding=UTF-8
+Type=Application
+Icon=alacarte

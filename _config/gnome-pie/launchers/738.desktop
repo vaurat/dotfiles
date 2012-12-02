@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Favoris
+Exec=/usr/bin/gnome-pie -o 738
+Encoding=UTF-8
+Type=Application
+Icon=user-bookmarks

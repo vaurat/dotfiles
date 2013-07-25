@@ -1,0 +1,57 @@
+[alias]
+    cp = cherry-pick
+    s = status -sb
+    st = status -s
+    cl = clone
+    ci = commit
+    co = checkout
+    br = branch
+    bv = branch -v
+    rv = remote -v
+    tryagain = reset --hard HEAD
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+    diff = diff --word-diff
+    dc = diff --cached
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    l = log --oneline --decorate
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+# relative dates, usage : git ld -10
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+# absolute dates, usage : git lds -10
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    lasttag = describe --tags --abbrev=0
+    lt = describe --tags --abbrev=0
+# Show a diff last commit:
+    dlc = diff --cached HEAD^
+# Show modified files in last commit:
+    dl = "!git ll -1"
+# Show content (full diff) of a commit given a revision (usage : git dr 8c2453)
+    dr  = "!f() { git diff "$1"^.."$1"; }; f"
+    lc  = "!f() { git ll "$1"^.."$1"; }; f"
+    diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+# find a filepath name. usage: git f toto.txt
+    f = "!git ls-files | grep -i"
+# Search/grep your entire codebase for a string:
+    grep = grep -Ii
+    gr = grep -Ii
+# Grep from root folder
+    gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+# show aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+# Rename [branch] to done-[branch]:
+    done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
+    assume = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+    unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+    assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+# merge tools for git managers
+    ours = "!f() { git co --ours $@ && git add $@; }; f"
+    theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+    

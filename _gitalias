@@ -54,4 +54,5 @@
 # merge tools for git managers
     ours = "!f() { git co --ours $@ && git add $@; }; f"
     theirs = "!f() { git co --theirs $@ && git add $@; }; f"
-    
+# remove files already deleted
+	rmdel = rm $(git ls-files --deleted)

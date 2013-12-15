@@ -1,0 +1,55 @@
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp 
+*.orig
+
+## IDE files to ignore
+nbproject/
+.idea/
+*.tmproj
+/*.eml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
+
+# special symfony
+/web/bundles/
+/app/bootstrap.php.cache
+*.outcache/*
+log/*
+web/uploads/*
+config/databases.yml
+config/propel.ini
+data/sql/*
+lib/filter/doctrine/base/Base*
+lib/filter/doctrine/*Plugin/base/Base*
+lib/form/doctrine/base/Base*
+lib/form/doctrine/*Plugin/base/Base*
+lib/model/doctrine/base/Base*
+lib/model/doctrine/*Plugin/base/Base*
+lib/model/om/*
+lib/model/map/*
+web/*Plugin/*
+composer.lock
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/app/config/parameters.yml
+build/
+composer.phar
+/vendor/
+/bin/
+

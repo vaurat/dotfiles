@@ -1,0 +1,59 @@
+[global_config]
+  title_transmit_bg_color = "#d30102"
+  focus = system
+[keybindings]
+[profiles]
+  [[default]]
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    copy_on_selection = True
+    visible_bell = True
+    background_darkness = 0.89
+    scrollback_lines = 5000
+    background_type = transparent
+    use_system_font = False
+    cursor_color = "#ffffff"
+    foreground_color = "#eee8d5"
+    font = Source Code Pro Medium 9
+    background_color = "#002b36"
+  [[solarized-dark]]
+    palette = "#073642:#d30102:#859900:#b58900:#6c71c4:#d33682:#2aa198:#839496:#586e75:#cb4b16:#859900:#b58900:#268bd2:#dc322f:#2aa198:#93a1a1"
+    copy_on_selection = True
+    visible_bell = True
+    background_darkness = 0.89
+    scrollback_lines = 5000
+    background_type = transparent
+    use_system_font = False
+    cursor_color = "#ffffff"
+    foreground_color = "#eee8d5"
+    font = Source Code Pro Medium 9
+    background_color = "#002b36"
+  [[remote]]
+    use_system_font = False
+    font = Source Code Pro Medium 9
+    background_darkness = 0.88
+    background_type = transparent
+    foreground_color = "#ffffff"
+    copy_on_selection = True
+  [[logs]]
+    use_system_font = False
+    font = Source Code Pro Medium 7
+    foreground_color = "#00ff00"
+  [[solarized-light]]
+    palette = "#073642:#d30102:#859900:#b58900:#6c71c4:#d33682:#2aa198:#839496:#586e75:#cb4b16:#859900:#b58900:#268bd2:#dc322f:#2aa198:#93a1a1"
+    font = Source Code Pro Medium 9
+    scrollback_lines = 5000
+    use_system_font = False
+    cursor_color = "#002b36"
+    foreground_color = "#002b36"
+    copy_on_selection = True
+    background_color = "#eee8d5"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = solarized-dark
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

@@ -8,10 +8,11 @@ alias remove="sudo apt-get remove"
 alias purge="sudo apt-get remove --purge"
 alias search="aptitude search"
 alias show="aptitude show"
+alias rdepends="apt-cache rdepends"
 alias repo="sudo add-apt-repository"
 
-alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert$//"'
 alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-terminal.png "[0] "'
+alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert$//"'
 
 
 # enable color support of ls and also add handy aliases
@@ -37,8 +38,9 @@ alias mv='mv -iv'
 alias rm='rm -i'
 
 # miscelaneous
-alias hosts="sudo nano /etc/hosts"
-alias switch_jdk="sudo update-alternatives --config java"
+alias hosts="sudo vi /etc/hosts"
+alias switch-jdk="sudo update-alternatives --config java"
+alias fuck='sudo $(history -p \!\!)'
 
 # navigating
 #alias docs='cd ~/Documents'
